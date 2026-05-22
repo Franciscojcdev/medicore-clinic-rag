@@ -26,6 +26,8 @@ Google Drive Trigger → Download File → Pinecone Vector Store
                                                   Recursive Character Text Splitter
 ```
 
+![Ingestion Workflow](workflow-ingestion.png)
+
 - Triggered automatically when a new file is uploaded to a Google Drive folder
 - Documents are split into chunks using a Recursive Character Text Splitter
 - Each chunk is embedded with `text-embedding-ada-002` (1536 dimensions)
@@ -41,10 +43,19 @@ When Chat Message Received → AI Agent
                                                     Embeddings OpenAI
 ```
 
+![Chatbot Workflow](workflow-chatbot.png)
+
 - Hosted chat interface publicly accessible via URL
 - AI Agent retrieves relevant chunks from Pinecone on each query
 - Conversation memory persisted in PostgreSQL via `Postgres Chat Memory`
 - Responds in the same language the user writes in
+
+---
+
+## 📸 Screenshots
+
+![Chat Demo ESI](chat-demo-esi.png)
+![Chat Demo Epinephrine](chat-demo-epinephrine.png)
 
 ---
 
